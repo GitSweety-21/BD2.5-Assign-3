@@ -268,7 +268,7 @@ function filterbasedaOnRam(product1, ram) {
 app.get('/products/filter/ram/', (req, res) => {
   let ram = parseFloat(req.query.ram);
   let result = products.filter((product1) => filterbasedaOnRam(product1, ram));
-  res.json(result);
+  res.json({ products : result });
 });
 
 function filterbasedOnRom(product1, rom) {
